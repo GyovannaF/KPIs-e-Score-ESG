@@ -23,21 +23,21 @@ export default defineConfig([
     extends: [
       // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
+      // oq precisa remover Remove tseslint.configs.recommended
       tseslint.configs.recommendedTypeChecked,
       // Alternatively, use this for stricter rules
       tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
+      // opcional coisa p estilo
       tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
+    
     ],
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
+     
     },
   },
 ])
@@ -56,10 +56,9 @@ export default defineConfig([
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-      // Enable lint rules for React
+      // outras configs
       reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
+     
       reactDom.configs.recommended,
     ],
     languageOptions: {
@@ -67,7 +66,6 @@ export default defineConfig([
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
 ])
